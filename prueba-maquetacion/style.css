@@ -1,45 +1,341 @@
-/* CSS PARA HEADER */
+body {
+    margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+}
+
+header {
+    height: 10vh;
+}
 
 .main-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-}
-
-.main-menu ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.buttons {
-  display: flex;
-  gap: 20px;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    background-color: hsl(294, 25%, 15%);
+    height: 100%;
+    padding: 0 1rem;
 }
 
 .icon-logo svg {
-  width: 40px;
-  height: 40px;
+    width: 50px;
+    fill: white;
 }
 
+.main-menu {}
 
-/* SECCION HERO */
+.main-menu ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    list-style: none;
+}
+
+.main-menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.user-area {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 0.5rem 0 0;
+}
+
+.user-area button {
+    color: white;
+    border-radius: 20px;
+    border-style: none;
+    padding: 1vh 3vh;
+}
+
+.button-sign-up button {
+    background-color: #FC6B7C;
+}
+
+.button-register button {
+    background-color: #5CE5CD;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+main>section:not(.hero) {
+    padding: 0 5%;
+}
 
 .hero {
-  display: flex;
-  align-items: start;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
+    height: 90vh;
+    position: relative;
 }
 
-.background-image picture img {
-  position: absolute;
-  object-fit: cover;
-  z-index: -1;
+
+
+
+.background-image {
+    position: absolute;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.background-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-call-to-action {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    left: 10%;
+    position: absolute;
+    top: 30%;
+    width: 30%;
+    z-index: 1001;
+}
+
+.hero-text {
+    width: 70%;
+}
+
+.hero-text::after {
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FC6B7C;
+}
+
+
+.hero-text-parraf {}
+
+.hero-button button {
+    color: white;
+    border-radius: 20px;
+    padding: 1vh 3vh;
+    border-style: none;
+    background-color: #8B8BF8;
+}
+
+.featured-cards {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 5vh;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #505170;
+    width: 20%;
+    height: 50vh;
+    gap: 2rem;
+    border-radius: 2rem;
+}
+
+.icon-card {
+    width: 100px;
+    fill: white;
+}
+
+.title-card {
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+
+.text-card {
+    color: white;
+    width: 50%;
+    text-align: center;
+}
+
+
+.next-card svg {
+    width: 20px;
+    fill: white;
+    background-color: #FC6B7C;
+    border-radius: 50%;
+    padding: 1vh;
+}
+
+
+.faqs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faqs-element {
+    border: 1px solid black;
+    background-color: #00A3C2;
+    padding: 1vh 1vh;
+}
+
+.faqs-element details {
+    color: rgb(0, 0, 0);
+}
+
+.faqs-element details p {
+    padding: 0 0 0 2rem;
+}
+
+.faqs-element {
+    background-color: wite;
+    color: black;
+}
+
+
+.faqs-element ul {
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0 2rem;
+}
+
+.faqs-element ul li {
+    position: relative;
+    padding-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faqs-element ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 5px;
+    height: 100%;
+    gap: 2rem;
+    background-color: #FC6B7C;
+}
+
+.faq .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.contact {
+    display: flex;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.contact-form-title h3 {
+    text-align: center;
+}
+
+.contact-form-description {}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-element-name {}
+
+.form-element-input-name {}
+
+.form-element-email {}
+
+.form-element-input-email {}
+
+.form-element-subject {}
+
+.form-element-input-subject {}
+
+.form-element-message {}
+
+.form-element-input-message {}
+
+.checkbox-form-terms {}
+
+.checkbox-form-comms {}
+
+.button-form {}
+
+.contact-map {
+    width: 50%;
+}
+
+.contact-map iframe {
+    width: 100%;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 10% 10% 10% minmax(50%, 80%);
+    column-gap: 4rem;
+    padding: 1rem 5%;
+}
+
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column:nth-child(3) {
+    grid-column: 4;
+}
+
+.footer-title-column {}
+
+.fooer-list-column {}
+
+.form-email {}
+
+.form-email-text {}
+
+.checkbox-form-email {}
+
+.p-privacy {}
+
+.button-footer-subscribe {}
+
+.social-media-buttons a svg {
+    width: 20px;
 }

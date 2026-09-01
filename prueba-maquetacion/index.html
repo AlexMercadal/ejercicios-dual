@@ -22,21 +22,21 @@
       </div>
       <nav class="main-menu">
         <ul>
-          <li>Inicio</li>
-          <li>Servicios</li>
-          <li>Productos</li>
-          <li>Contacto</li>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
         </ul>
+        <div class="user-area">
+          <div class="button-sign-up">
+            <button>Sign Up</button>
+          </div>
+          <div class="button-register">
+            <button>Register</button>
+          </div>
+        </div>
       </nav>
 
-      <div class="user-area">
-        <div class="button-sign-up">
-          <button>Sign Up</button>
-        </div>
-        <div class="button-register">
-          <button>Register</button>
-        </div>
-      </div>
     </div>
 
   </header>
@@ -47,20 +47,13 @@
     <section class="hero">
       <div class="background-image">
         <picture>
-          <img src="/background-prueba-maquetacion.webp" alt="background-image">
+          <img src="./background-prueba-maquetacion.webp" alt="background-image">
         </picture>
       </div>
 
       <div class="hero-call-to-action">
         <div class="hero-text">
           <h1>Deep dive into Data</h1>
-        </div>
-
-        <div class="hero-line">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>line-hero</title>
-            <path d="M19,13H5V11H19V13Z" />
-          </svg>
         </div>
 
         <div class="hero-text-parraf">
@@ -77,49 +70,55 @@
 
     <section class="featured-cards">
       <div class="cards">
-        <div class="icon-card-os">
+        <div class="icon-card">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>account-cowboy-hat-outline</title>
             <path
               d="M19 4C18.4 4 18 4.4 18 5V6H16.5L15.1 3C15 2.8 14.9 2.6 14.7 2.5C14.2 2 13.4 1.9 12.7 2.2L12 2.4L11.3 2.1C10.6 1.8 9.8 1.9 9.3 2.4C9.1 2.6 9 2.8 8.9 3L7.5 6H6V5C6 4.4 5.6 4 5 4S4 4.4 4 5V6C4 7.1 4.9 8 6 8H18C19.1 8 20 7.1 20 6V5C20 4.5 19.6 4 19 4M4 22V19C4 16.33 9.33 15 12 15S20 16.33 20 19V22H4M18.1 20.1V19C18.1 18.36 14.97 16.9 12 16.9S5.9 18.36 5.9 19V20.1H18.1M16 9V10C16 12.21 14.21 14 12 14S8 12.21 8 10V9H10V10C10 11.11 10.9 12 12 12S14 11.11 14 10V9H16Z" />
           </svg>
         </div>
-        <div class="title-card-os">
+        <div class="title-card">
           <h2>Open Source API Gateway</h2>
         </div>
-        <div class="text-card-os">
+        <div class="text-card">
           <p>Secure, lightweight, highly performant. It's free, forever</p>
+        </div>
+        <div class="next-card">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <title>skip-forward</title>
+            <path d="M4,5V19L11,12M18,5V19H20V5M11,5V19L18,12" />
+          </svg>
         </div>
       </div>
 
       <div class="cards">
-        <div class="icon-card-api">
+        <div class="icon-card">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>account-reactivate</title>
             <path
               d="M21.5 9H16.5L18.36 7.14C16.9 5.23 14.59 4 12 4C7.58 4 4 7.58 4 12C4 13.83 4.61 15.5 5.64 16.85C6.86 15.45 9.15 14.5 12 14.5C14.85 14.5 17.15 15.45 18.36 16.85C19.39 15.5 20 13.83 20 12H22C22 17.5 17.5 22 12 22C6.5 22 2 17.5 2 12C2 6.5 6.5 2 12 2C15.14 2 17.95 3.45 19.78 5.72L21.5 4V9M12 7C13.66 7 15 8.34 15 10C15 11.66 13.66 13 12 13C10.34 13 9 11.66 9 10C9 8.34 10.34 7 12 7Z" />
           </svg>
         </div>
-        <div class="title-card-api">
+        <div class="title-card">
           <h2>API Managmement Dashboard</h2>
         </div>
-        <div class="text-card-api">
+        <div class="text-card">
           <p>Open up your APIs to the world, without touching a single line of code</p>
         </div>
       </div>
 
       <div class="cards">
-        <div class="icon-card-develop">
+        <div class="icon-card">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
             <title>account-wrench-outline</title>
             <path
               d="M22.9 21.2L18.8 17.1C19.2 16.1 19 14.8 18.1 14C17.2 13.1 15.9 12.9 14.8 13.4L16.7 15.3L15.3 16.7L13.3 14.7C12.8 15.8 13 17.1 13.9 18.1C14.8 19 16 19.2 17 18.8L21.1 22.9C21.3 23.1 21.6 23.1 21.7 22.9L22.7 21.9C23 21.6 23 21.3 22.9 21.2M10 12C12.2 12 14 10.2 14 8S12.2 4 10 4 6 5.8 6 8 7.8 12 10 12M10 6C11.1 6 12 6.9 12 8S11.1 10 10 10 8 9.1 8 8 8.9 6 10 6M13 20H2V17C2 14.3 7.3 13 10 13C10.5 13 11.2 13.1 11.9 13.2C11.5 13.7 11.3 14.3 11.1 15C10.7 15 10.4 14.9 10 14.9C7 14.9 3.9 16.4 3.9 17V18.1H11.5C11.8 18.9 12.4 19.5 13 20Z" />
           </svg>
         </div>
-        <div class="title-card-develop">
+        <div class="title-card">
           <h2>API Developer Portal</h2>
         </div>
-        <div class="text-card-develop">
+        <div class="text-card">
           <p>Share your APIs and documentation with your developer community</p>
         </div>
       </div>
@@ -138,9 +137,20 @@
       <div class="faqs-element">
         <details>
           <summary>Asociaciones profesionales</summary>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi doloremque quos facere molestiae numquam
-            autem enim quia placeat, laborum veritatis pariatur quaerat, modi tempore omnis consectetur officiis
-            temporibus, officia atque.</p>
+          <ul>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. A perspiciatis harum, non minima in maxime esse
+              quis praesentium natus enim alias possimus, dignissimos veniam ipsa aperiam tempore totam quaerat quo.
+            </li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, sed nostrum? Ducimus aspernatur
+              eveniet, eaque consequatur, quidem iusto, ipsam nihil similique molestias deserunt repellendus sed beatae
+              commodi dicta et nobis.</li>
+            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam totam tempora nam repellendus quod? Id
+              est totam in, itaque doloremque quia amet tenetur laborum repellat? Explicabo tempora saepe sit! Ex. </li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem laboriosam adipisci repudiandae
+              facilis ut. Dolorem vitae ab consequatur. Repellat totam amet molestias vel similique consequatur,
+              accusamus nemo! Tempora, porro incidunt!</li>
+            <li>Lorem</li>
+          </ul>
         </details>
       </div>
 
@@ -174,11 +184,11 @@
               <input type="text" id="name" name="name" required>
             </div>
 
-            <div class="form-element-mail">
+            <div class="form-element-email">
               <label for="email">Dirección de correo electrónico*</label>
             </div>
 
-            <div class="form-element-input-mail">
+            <div class="form-element-input-email">
               <input type="email" id="email" name="email" required>
             </div>
 
@@ -194,7 +204,7 @@
               <label for="message">Mensaje*</label>
             </div>
 
-            <div class="form-element-input-name">
+            <div class="form-element-input-message">
               <textarea type="textarea" id="message" name="message" required></textarea>
             </div>
 
@@ -227,10 +237,10 @@
 
   <footer>
     <div class="footer-column">
-      <div class="footer-h3-column">
+      <div class="footer-title-column">
         <h3>Extra</h3>
       </div>
-      <div class="footer-ul-column">
+      <div class="footer-list-column">
         <ul>
           <li>Cloud status</li>
           <li>Raise a bug</li>
@@ -239,10 +249,10 @@
     </div>
 
     <div class="footer-column">
-      <div class="footer-h3-column">
+      <div class="footer-title-column">
         <h3>Legal</h3>
       </div>
-      <div class="footer-ul-column">
+      <div class="footer-list-column">
         <ul>
           <li>Terms & Conditions</li>
           <li>Privacy Policy</li>
@@ -251,9 +261,8 @@
         </ul>
       </div>
     </div>
-
     <div class="footer-column">
-      <div class="footer-h3-column">
+      <div class="footer-title-column">
         <h3>Subscribe to our mailer</h3>
       </div>
 
