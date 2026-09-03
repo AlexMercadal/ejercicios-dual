@@ -1,43 +1,239 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    cursor: url("Scope.cur"), auto;
+}
+
 img {
     width: 100%;
     object-fit: cover;
 }
 
-body {}
+body {
+    margin: 0;
+}
 
-header {}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+}
 
-.top-bar {}
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
 
-.main-bar {}
+a {
+    color: inherit;
+    text-decoration: none;
+}
 
-.main-bar-logo {}
+button {
+    all: unset;
+    cursor: pointer;
+}
 
-.main-bar-menu {}
 
-.main-bar-user-menu {}
 
-.main-bar-user-menu-button {}
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 3000;
+    background-color: white;
+}
 
-.main-bar-user-call-to-action {}
+.top-bar {
+    position: relative;
+    align-items: center;
+    background-color: #2A3551;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    height: 4vh;
+}
 
-.hero {}
+.top-bar span {
+    color: white;
+    gap: 1rem;
+    font-size: 0.8rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
 
-.hero-content {}
+.top-bar-style span {
+    display: flex;
+    align-items: center;
+    color: hsl(223, 32%, 24%);
+    background-color: #67FED2;
+    border-radius: 0.2rem;
+    font-size: 0.7rem;
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 600;
+    line-height: 1.2rem;
+    height: 10%;
+    padding: 0.1rem 0.5rem;
 
-.hero-content-subtitle {}
+}
 
-.hero-content-title {}
+main {
+    padding-top: 12vh;
+}
 
-.hero-content-description {}
+.main-bar {
+    position: relative;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 8vh;
+    border: 1px solid hsla(0, 0%, 50%, 0.108);
+}
 
-.hero-content-call-to-action {}
+.main-bar-logo {
+    display: flex;
+    align-items: center;
+    padding-left: 20rem;
+}
+
+.main-bar-menu ul {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.main-bar-menu ul li a {
+    align-items: center;
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: hsl(223.1 31.71% 24.12%);
+}
+
+.main-bar-user-menu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding-right: 20rem;
+}
+
+.main-bar-user-menu-button {
+    display: flex;
+    padding: 1rem;
+}
+
+.main-bar-user-menu-button button {
+    background: transparent;
+}
+
+.main-bar-user-menu-button a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: hsl(223.1 31.71% 24.12%);
+}
+
+
+.main-bar-user-menu-button svg {
+    width: 1.1rem;
+    fill: hsl(223.1 31.71% 24.12%);
+}
+
+.main-bar-user-call-to-action a {
+    align-items: center;
+    background-color: #2A3551;
+    border-radius: 0.3rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    z-index: 1001;
+    width: 100%;
+    height: 79vh;
+
+}
+
+.hero-video-background-linear {
+    background: white;
+    filter: opacity(10%);
+}
+
+.hero-content-video-background {
+    position: absolute;
+    z-index: 1000;
+    top: -10vh;
+}
+
+.hero-content-video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 79vh;
+}
+
+.hero-content-subtitle h4 {}
+
+.hero-content-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content-call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
 
 .hero-content-call-to-action-left {}
 
-.hero-content-call-to-action-right {}
+.hero-content-call-to-action-right button a svg {
+    width: 1rem;
+}
 
-.hero-content-rating {}
+.hero-content-rating button a svg {
+    width: 1rem;
+}
 
 .slider-content {}
 
