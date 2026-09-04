@@ -11,6 +11,14 @@ body {
     margin: 0;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
 h1,
 h2,
 h3,
@@ -41,103 +49,566 @@ button {
 
 header {
     height: 15vh;
+    position: sticky;
+    top: 0;
+    z-index: 1003;
+    background-color: hsl(0, 0%, 100%);
+}
+
+main {
+    width: 100%;
 }
 
 .top-bar {
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+    height: 4vh;
+    overflow: hidden;
+    background-color: #f8f8f8;
+}
+
+.top-bar-right {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 6vh;
+    padding-left: 5rem;
+    gap: 2rem;
 }
 
 .top-bar-location {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
 }
 
-.top-bar-location svg {
-    width: 2rem;
+.top-bar-location-icon svg {
+    width: 1.5rem;
+    fill: #14A7DE;
 }
 
 .top-bar-location-icon {}
 
-.top-bar-location-text {}
+.top-bar-location-text {
+    text-transform: uppercase;
+    font-family: "Saira Condensed", sans-serif;
+}
 
 .top-bar-phone {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .top-bar-phone-icon svg {
-    width: 2rem;
+    width: 1.5rem;
+    fill: #14A7DE;
+
 }
 
-.top-bar-phone-text {}
+.top-bar-phone-text {
+    font-family: "Saira Condensed", sans-serif;
+
+}
+
+
+.top-bar-social-media {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    padding-right: 5rem;
+
+}
+
+.top-bar-social-media svg {
+    width: 1.5rem;
+    fill: #14A7DE;
+}
 
 .main-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 9vh;
+    height: 11vh;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    box-shadow: 0 0.35rem 0.5rem -0.3rem rgba(0, 0, 0, 0.18);
 }
 
 .main-bar-logo {}
 
+.main-bar-logo img {
+    height: 8vh;
+}
+
 .main-bar-nav {}
 
-.main-bar-social-media {}
+.main-bar-nav ul {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
 
-.hero {}
+.main-bar-nav ul li a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.5rem;
+    color: hsl(195, 87%, 20%);
+}
 
-.hero-background-opacity {}
+.main-bar-nav ul li a:active {
+    color: black;
+}
 
-.hero-background {}
+.main-bar-nav ul li a:hover {
+    text-decoration: underline;
+    text-decoration-color: #14A7DE;
+    text-underline-offset: 0.1rem;
 
-.hero-content {}
+}
 
-.hero-content-title {}
+.main-bar-button {}
 
-.hero-content-subtitle {}
+.main-bar-button button {
+    background-color: #14A7DE;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+}
 
-.hero-content-description {}
+.main-bar-button button a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+}
 
-.hero-content-buttons {}
+.main-bar-button button:hover {
+    background-color: #000000;
+}
 
-.hero-content-button-left {}
 
-.hero-content-button-right {}
+.hero {
+    display: flex;
+    padding: 10vh 10vh;
+    height: 65vh;
+    overflow: hidden;
+}
 
-.hero-content-right {}
 
-.hero-content-3d {}
+.hero-content {
+    display: flex;
+    gap: 2rem;
+}
 
-.slider-brands {}
+.hero-content-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 50%;
+    gap: 1rem;
+    height: 65vh;
+}
 
-.slider-brand {}
+.hero-content-subtitle span {
+    color: #14A7DE;
+    text-transform: uppercase;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
 
-.hero-services {}
+.hero-content-title h1 {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 6rem;
+    line-height: 1.1;
+}
 
-.hero-services-titles {}
+.hero-content-title span {
+    color: #14A7DE;
+}
 
-.hero-services-title {}
+.hero-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 10vh;
+    width: 40%;
+    height: 65vh;
+    gap: 1rem;
+    padding-top: 26.5vh;
+}
 
-.hero-services-description {}
+.hero-content-description p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: hsl(195, 32%, 25%);
+    line-height: 1.5;
+}
 
-.hero-services-cards {}
+.hero-content-buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
 
-.hero-services-card {}
+.hero-content-button-left {
+    background-color: #14A7DE;
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 2rem;
+}
 
-.hero-services-card-icon {}
+.hero-content-button-left a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.1rem;
+}
 
-.hero-services-card-title {}
+.hero-content-button-left:hover {
+    background-color: #000000;
+    color: white;
+}
 
-.hero-services-card-description {}
 
-.hero-services-card-check {}
+.hero-content-button-right {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.hero-services-button {}
+.hero-content-button-right:hover {
+    border: 1px solid black;
+}
+
+.hero-content-button-right a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.1rem;
+}
+
+.hero-content-button-right svg {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+.hero-post-background-content {}
+
+.hero-post-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+    overflow: hidden;
+    z-index: 1001;
+}
+
+.hero-post-background img {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    z-index: 1000;
+}
+
+.hero-image-top {
+    position: relative;
+    z-index: 1001;
+    width: 20%;
+    border-radius: 1rem;
+    background-color: white;
+    left: 40vh;
+    top: -12vh;
+}
+
+.hero-image-text {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.hero-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.hero-image-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.hero-image-middle::after {
+    content: '';
+    position: absolute;
+    width: 0.1vh;
+    height: 5vh;
+    background-color: hsla(0, 0%, 50%, 0.582);
+    right: -2.5vh;
+    z-index: 1000;
+}
+
+.hero-image-middle::before {
+    content: '';
+    position: absolute;
+    width: 0.1vh;
+    height: 5vh;
+    background-color: hsla(0, 0%, 50%, 0.582);
+    left: -2.5vh;
+    z-index: 1000;
+}
+
+.hero-image span:first-child {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+}
+
+.hero-image span:last-child {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.7rem;
+    color: hsl(195, 32%, 25%);
+    text-transform: uppercase;
+}
+
+.hero-image-middle span:first-child {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+}
+
+.hero-image-middle span:last-child {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.7rem;
+    color: hsl(195, 32%, 25%);
+    text-transform: uppercase;
+}
+
+.slider-brands {
+    overflow: hidden;
+    width: 100%;
+    background: white;
+    white-space: nowrap;
+}
+
+.slider-brand {
+    display: inline-flex;
+    align-items: center;
+    animation: scroll 20s linear infinite;
+}
+
+.logo-item {
+    display: inline-flex;
+    align-items: center;
+}
+
+.logo-item img {
+    width: auto;
+    max-height: 10vh;
+    margin: 0 5vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+.logo-item::after {
+    content: "·";
+    font-size: 5vh;
+    color: hsl(195, 32%, 25%);
+    margin: 0;
+}
+
+
+.slider-brand img {
+    width: 10vh;
+    margin: 0 10vh;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.hero-services {
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-services-titles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 5vh;
+}
+
+.hero-services-title {
+    width: 50%;
+}
+
+.hero-services-title h3 {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 5rem;
+    width: 100%;
+}
+
+.hero-services-description {
+    width: 50%;
+}
+
+
+.hero-services-description p {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    color: hsl(195, 32%, 25%);
+    width: 100%;
+    line-height: 1.5rem;
+}
+
+.hero-services-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.hero-services-card {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 2fr;
+    padding-top: 3vh;
+    height: 20vh;
+    border: 1px solid black;
+    align-items: center;
+
+}
+
+
+.hero-services-card-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-services-card-number span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    color: #14A7DE;
+}
+
+.hero-services-card-title h4 {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.5rem;
+}
+
+.service-row {
+    display: grid;
+    grid-template-columns: 0.2fr 2fr 2fr;
+    padding-top: 3vh;
+    height: 20vh;
+    border-bottom: 1px solid hsl(195, 32%, 25%);
+    gap: 10vh;
+}
+
+.hero-services-titles+.service-row {
+    border-top: 1px solid hsl(195, 32%, 25%);
+
+}
+
+.service-index {
+    padding-left: 2vh;
+    color: #14A7DE;
+    font-size: 2vh;
+}
+
+.service-title {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.8rem;
+}
+
+.service-body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5vh;
+}
+
+.service-body p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    color: hsl(195, 32%, 25%);
+    width: 80%;
+}
+
+.tags {
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+}
+
+.tags span {
+    background-color: white;
+    color: black;
+    padding: 0.5vh 1vh;
+    border-radius: 1rem;
+    border: 0.1vh solid rgba(0, 0, 0, 0.329);
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.9rem;
+}
+
+.service-row:hover {
+    background-color: #f8f8f8;
+}
+
+.hero-services-button {
+    display: flex;
+    align-items: center;
+    gap: 1vh;
+    padding-top: 1rem;
+    border-bottom: 1px solid black;
+    width: 13%;
+    cursor: pointer;
+}
+
+.hero-services-button:hover {
+    border-bottom: 1px solid #14A7DE;
+}
+
+.hero-services-button:hover button {
+    color: #14A7DE;
+}
+
+.hero-services-button:hover svg {
+    fill: #14A7DE;
+}
+
+.hero-services-button svg {}
+
+.hero-services-button button {
+    color: black;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.2rem;
+}
+
+.hero-services-button svg {
+    width: 2rem;
+}
 
 .about-us {}
 

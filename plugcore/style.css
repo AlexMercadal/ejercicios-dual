@@ -175,8 +175,9 @@ main {
 }
 
 .hero-video-background-linear {
-    background: white;
+    background: rgb(255, 255, 255);
     filter: opacity(10%);
+
 }
 
 .hero-content-video-background {
