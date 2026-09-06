@@ -472,16 +472,15 @@ main {
 }
 
 .hero-services-description {
-    width: 50%;
+    width: 60%;
 }
 
 
 .hero-services-description p {
-    font-family: "Roboto Mono", monospace;
-    font-size: 0.95rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.2rem;
     color: hsl(195, 32%, 25%);
-    width: 100%;
-    line-height: 1.5rem;
+    line-height: 1.5;
 }
 
 .hero-services-cards {
@@ -577,17 +576,25 @@ main {
 }
 
 .hero-services-button {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 1vh;
     padding-top: 1rem;
-    border-bottom: 1px solid black;
-    width: 13%;
     cursor: pointer;
 }
 
-.hero-services-button:hover {
-    border-bottom: 1px solid #14A7DE;
+.hero-services-button::after {
+    content: '';
+    position: absolute;
+    background-color: black;
+    width: 5.9%;
+    height: 1px;
+    bottom: 1px;
+}
+
+.hero-services-button:hover::after {
+    background-color: #14A7DE;
 }
 
 .hero-services-button:hover button {
@@ -610,102 +617,603 @@ main {
     width: 2rem;
 }
 
-.about-us {}
+.about-us {
+    background-color: #0D0F11;
+    padding: 5rem 0;
+    margin-left: -5rem;
+    margin-right: -5rem;
+}
 
-.about-us-content {}
+.about-us-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vh;
+    padding: 0 5rem;
+}
 
-.about-us-content-left {}
+.about-us-content-left {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+}
 
-.about-us-content-left-image {}
+.about-us-content-left-image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-.about-us-content-right {}
+.about-us-content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+}
 
-.about-us-content-right-title {}
+.about-us-content-right-subtitle span {
+    color: #14A7DE;
+    text-transform: uppercase;
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    letter-spacing: 0.15rem;
+}
+
+.about-us-content-right-title {
+    width: 70%;
+}
+
+.about-us-content-right-title h3 {
+    font-family: "Saira Condensed", sans-serif;
+    color: white;
+    font-size: 4rem;
+    line-height: 1.1;
+}
 
 .about-us-content-right-description {}
 
-.about-us-content-right-services {}
+.about-us-content-right-description p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.5rem;
+    color: hsl(0, 0%, 75%);
+    line-height: 1.7;
+}
 
-.banner-slogan {}
+.about-us-content-right-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    padding-top: 1.5rem;
+}
 
-.banner-slogan-container {}
+.about-us-content-right-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border: 0.1rem solid #707679;
+    padding: 0.7rem;
+    background-color: #08090A;
+}
 
-.banner-slogan-background {}
+.about-us-content-right-card-title h4 {
+    font-family: "Saira Condensed", sans-serif;
+    color: #14A7DE;
+    font-size: 1.3rem;
+}
 
-.banner-slogan-top {}
+.about-us-content-right-card-description p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 75%);
+    text-align: center;
+}
 
-.banner-slogan-bottom {}
 
-.hero-timeline-services {}
+.hero-timeline-services-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
 
-.hero-timeline-service {}
+.hero-timeline-services-top-subtitle span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    color: #14A7DE;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
 
-.hero-timeline-service-subtitle {}
+.hero-timeline-services-title {
+    font-family: "Saira Condensed", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 4rem;
+    line-height: 1.1;
+    padding-bottom: 5rem;
+}
 
-.hero-timeline-service-title {}
 
-.hero-timeline-service-description {}
+.hero-timeline-services-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+}
 
-.customers {}
+.hero-timeline-service::before {
+    content: '';
+    background-color: #14A7DE;
+    width: 90%;
+    height: 2px;
+    margin-bottom: 1rem;
+}
 
-.customers-subtitle {}
+.hero-timeline-service {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    align-items: flex-start;
+}
+
+.hero-timeline-service-subtitle {
+    margin: -3vh 0;
+}
+
+.hero-timeline-service-subtitle span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 4rem;
+    color: #2674b446;
+}
+
+.hero-timeline-service-title h3 {
+    font-family: "Saira Condensed", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+.hero-timeline-service-descrption p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 0%);
+    width: 70%;
+}
+
+.hero-timeline-service:hover {
+    background-color: #f4f4f4;
+}
+
+
+.banner-call-to-action {
+    background-color: #0D0F11;
+    position: relative;
+    height: 30vh;
+    margin-left: -5rem;
+    margin-right: -5rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.banner-call-to-action-content-elements {
+    padding: 1rem 5rem;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.banner-call-to-action-content-elements::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    width: 1px;
+    height: 5rem;
+    top: 3.5vh;
+    right: 0;
+}
+
+.banner-call-to-action-content-elements:last-child::after {
+    display: none;
+}
+
+.banner-call-to-action-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+
+.banner-call-to-action-content-svg svg {
+    width: 25px;
+    fill: #14A7DE;
+}
+
+.banner-call-to-action-content-title span {
+    font-family: "Saira Condensed", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
+}
+
+.banner-call-to-action-content-description span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    width: 70%;
+}
+
+.banner-call-to-action-content-element-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.banner-call-to-action-content-element-button a {
+    color: white;
+}
+
+.customers {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.customers-subtittle span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    color: #14A7DE;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
 
 .customers-title {}
 
-.customers-percentage {}
+.customers-title h4 {
+    font-family: "Saira Condensed", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
 
-.customers-review {}
+.customers-percentage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 
-.contact {}
+}
 
-.contact-left {}
+.customers-percentage span:last-child {
+    position: relative;
+    top: -2vh;
+}
 
-.contact-left-row {}
+.customers-percentage :first-child {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 4rem;
+    color: #14A7DE;
+}
 
-.contact-left-row-name {}
+.customers-percentage :last-child {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+    color: #0D0F11;
+}
 
-.contact-left-row-email {}
 
-.contact-left-row-phone {}
+.customers-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+    gap: 3rem;
+    padding: 5 0rem;
+}
 
-.contact-left-row-message {}
+.customer-review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #0D0F11;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem;
+    gap: 1rem;
+    position: relative;
+    width: 100%;
+    left: 50%;
+}
 
-.contact-right {}
+.customer-review-svg span {
+    color: #14A7DE;
+}
 
-.contact-right-subtitle {}
+.customer-review-text span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 100%);
+    width: 70%;
+}
 
-.contact-right-title {}
+.customer-review-name {
+    position: relative;
+}
 
-.contact-right-description {}
+.customer-review-name span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    position: relative;
+    top: 1rem;
 
-.contact-right-button {}
+}
 
-.contact-right-phone {}
+.customer-review-name::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10rem;
+    height: 1px;
+    background-color: #14A7DE;
+}
 
-.contact-right-phone-icon {}
 
-.contact-right-phone-text {}
 
-.contact-right-schedule {}
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
 
-.contact-right-schedule-icon {}
+.contact-left {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 70%;
+    position: relative;
+    gap: 1rem;
+    padding: 5rem 5rem 3rem 5rem;
+    background-color: #0D0F11;
+    border-radius: 10px;
+    left: 30%;
+}
 
-.contact-right-schedule-text {}
+.contact-left-row-together {
+    display: flex;
+    gap: 1rem;
+}
 
-.contact-right-adress {}
+.contact-left-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
 
-.contact-right-adress-icon {}
+.contact-left-row-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
 
-.contact-right-adress-text {}
+.contact-left-rows label {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+}
 
-.contact-map {}
+.contact-left-rows input {
+    width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #14A7DE;
+    padding: 0.5rem 1rem;
+}
+
+.contact-left-rows input::placeholder {
+    color: #434445;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}
+
+.contact-left-rows textarea::placeholder {
+    color: #434445;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+}
+
+.contact-left-rows textarea {
+    width: 100%;
+    height: 15vh;
+    background-color: #ffffff;
+    border: 1px solid #14A7DE;
+    padding: 0.5rem 1rem;
+}
+
+.contact-left-button button {
+    background-color: #14A7DE;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 2rem;
+}
+
+.contact-left-button button a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.contact-left-button button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+.contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-right-subtitle span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1rem;
+    color: #14A7DE;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+}
+
+.contact-right-title h3 {
+    font-family: "Saira Condensed", sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 2.5rem;
+}
+
+.contact-right-description p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    color: hsl(0, 0%, 0%);
+    width: 70%;
+}
+
+.contact-right-icon svg {
+    width: 2rem;
+}
+
+.contact-right-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-right-card-content {
+    padding: 6rem 1rem;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    border: 1px solid black;
+    margin-top: 2rem;
+    border-radius: 1rem;
+    gap: 1rem;
+}
+
+.contact-right-icon svg {
+    fill: #14A7DE;
+}
+
+.contact-right-card-text span {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+
+.contact-right-button {
+    background-color: #ffffff;
+    color: black;
+    border: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 0.75rem 1.5rem;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    margin-top: 2rem;
+}
+
+.contact-right-button:hover {
+    border: 1px solid black;
+}
+
+.contact-right-button a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.1rem;
+}
+
+.contact-right-button svg {
+    margin-right: 0.5rem;
+    width: 1rem;
+}
+
+/* preguntar carlos porque no funciona el margin */
+
+.contact-map {
+    overflow: hidden;
+    width: 100%;
+    padding: 0;
+    margin: 0 -5rem;
+}
 
 .contact-map-iframe {}
 
-.footer {}
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: #0D0F11;
+}
 
-.footer-content-logo {}
 
-.footer-nav {}
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10rem;
+    height: 10vh;
+    overflow: hidden;
 
-.footer-content-social {}
+}
+
+.footer-content-logo img {
+    width: 3rem;
+}
+
+.footer-nav ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav a:hover {
+    color: #14A7DE;
+}
+
+.footer-nav a {
+    font-family: "Saira Condensed", sans-serif;
+    font-size: 1.3rem;
+    color: white;
+}
+
+.footer-content-social ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content-social svg {
+    width: 1.5rem;
+    fill: #14A7DE;
+}
+
+.footer-content-copy {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 10rem;
+    height: 5vh;
+    overflow: hidden;
+    background-color: #0000001a;
+}
+
+.footer-content-copy p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.8rem;
+    color: white;
+}
