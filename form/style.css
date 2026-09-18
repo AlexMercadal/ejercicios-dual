@@ -1,3 +1,7 @@
+body {
+  overflow: hidden;
+}
+
 .form {
   display: flex;
   justify-content: center;
@@ -49,4 +53,63 @@
 .submit-button.active {
   transform: scale(105%);
   background-color: rgb(9, 255, 0);
+}
+
+.notification {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: 5rem;
+  height: 15vh;
+  width: 30vh;
+  opacity: 0;
+  transition: all 0.5s ease;
+  border: 1px black solid;
+}
+
+.notification.active {
+  opacity: 1;
+}
+
+.notification-header {
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  height: 2vh;
+}
+
+.notification-body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem
+}
+
+.notification-body p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.notification-body-success {
+  background-color: #00ff08;
+  margin-top: 2rem;
+  padding: 0rem 1rem;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notification-body-error {
+  background-color: #ff0000;
+  padding: 1rem;
+  width: 4rem;
+  height: 4rem;
+  overflow: hidden;
+  padding: 0rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
 }

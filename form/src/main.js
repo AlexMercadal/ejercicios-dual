@@ -1,12 +1,11 @@
 export default (() => {
   const submit = document.querySelector(".submit-button")
+  const notification = document.querySelector(".notification")
 
   submit.addEventListener("click", (event) => {
     event.preventDefault()
-    alert("se ha enviado el formulario")
+    notification.classList.toggle("active")
     submit.classList.toggle("active");
   });
-
-
 
 })();
