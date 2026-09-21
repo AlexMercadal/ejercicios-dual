@@ -1,2 +1,3 @@
-import './menu.js';
-import './switch-color.js';
+import './components/switch.js';
+import './components/sidebar.js';
+import './components/chat.js'
