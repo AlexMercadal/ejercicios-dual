@@ -13,29 +13,34 @@ class Reservation extends HTMLElement {
     this.shadow.innerHTML =
     /*html*/`
     <style>
-     .main-bar-button button {
+      button {
+        all: unset;
+        cursor: pointer;
+      }
+
+     .button button {
         background-color: #14A7DE;
-        color: white;
         padding: 0.5rem 2rem;
         border-radius: 2rem;
       }
 
-      .main-bar-button button a {
+      .button button a {
         font-family: "Saira Condensed", sans-serif;
         font-size: 1.3rem;
         text-decoration: none;
+        color:white;
       }
 
-      .main-bar-button button:hover {
+      .button button:hover {
         background-color: #000000;
       }
 
-      .main-bar-button button:hover a {
+      .button button:hover a {
         color: hsla(0, 0%, 100%, 1.00);
       }
     </style>
 
-    <div class="main-bar-button">
+    <div class="button">
       <button><a href="">Reservar cita</a></button>
     </div>
     `

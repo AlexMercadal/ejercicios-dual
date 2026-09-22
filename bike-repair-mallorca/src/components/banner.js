@@ -66,8 +66,7 @@ class Banner extends HTMLElement {
               background-color: #0D0F11;
               position: relative;
               height: 30vh;
-              margin-left: -5rem;
-              margin-right: -5rem;
+              width:100%;
               overflow: hidden;
               display: flex;
               justify-content: space-around;

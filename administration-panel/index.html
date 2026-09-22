@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel administración</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arimo&family=Valley+Sans:wght@700&display=swap" rel="stylesheet">
+
+  <script type="module" src="src/index.js"></script>
+
+
+  <style>
+    body {
+      margin: 0;
+    }
+  </style>
+
+</head>
+
+<body>
+  <header-component>
+    <title-component slot="header-left" title="Panel de administración"></title-component>
+    <bar-icon-component slot="header-right"></bar-icon-component>
+  </header-component>
+
+  <main-component>
+    <table-component slot="main-left"></table-component>
+    <form-component slot="main-right"></form-component>
+  </main-component>
+</body>
+
+
+</html>

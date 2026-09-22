@@ -65,8 +65,7 @@ class Logo extends HTMLElement {
         .about-us {
             background-color: #0D0F11;
             padding: 5rem 0;
-            margin-left: -5rem;
-            margin-right: -5rem;
+            width:100%;
         }
 
         .about-us-content {

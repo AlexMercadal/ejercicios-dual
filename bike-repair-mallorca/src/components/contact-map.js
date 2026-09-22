@@ -16,7 +16,8 @@ class ContactMap extends HTMLElement {
      .contact-map {
         width: 100%;
         overflow: hidden;
-        transform: scale(1.1);
+        padding-top:5rem;
+        margin:0;
     }
 
     </style>

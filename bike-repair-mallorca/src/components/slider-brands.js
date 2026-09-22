@@ -1,16 +1,16 @@
 class SliderBrands extends HTMLElement {
 
-  constructor() {
-    super()
-    this.shadow = this.attachShadow({ mode: 'open' })
-  }
+    constructor() {
+        super()
+        this.shadow = this.attachShadow({ mode: 'open' })
+    }
 
-  connectedCallback() {
-    this.render()
-  }
+    connectedCallback() {
+        this.render()
+    }
 
-  render() {
-    this.shadow.innerHTML =
+    render() {
+        this.shadow.innerHTML =
     /*html*/`
     <style>
      .slider-brands {
@@ -24,6 +24,7 @@ class SliderBrands extends HTMLElement {
     display: inline-flex;
     align-items: center;
     animation: scroll 20s linear infinite;
+    padding:10vh 10vh;
 }
 
 .logo-item {
@@ -95,7 +96,7 @@ class SliderBrands extends HTMLElement {
     </section>
     `
 
-  }
+    }
 }
 
 customElements.define('slider-brands-component', SliderBrands);

@@ -62,14 +62,6 @@ class Contact extends HTMLElement {
           cursor: pointer;
       }
 
-      header {
-          height: 15vh;
-          position: sticky;
-          top: 0;
-          z-index: 1003;
-          background-color: hsl(0, 0%, 100%);
-      }
-
       .contact {
           display: grid;
           grid-template-columns: 1fr 1fr;

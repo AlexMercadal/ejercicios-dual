@@ -23,17 +23,6 @@ class HeroTimeline extends HTMLElement {
         object-fit: cover;
     }
 
-    body {
-        margin: 0;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        gap: 10vh;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
 
     h1,
     h2,
@@ -62,6 +51,10 @@ class HeroTimeline extends HTMLElement {
         all: unset;
         cursor: pointer;
     } 
+
+    .hero-timeline-services{
+      padding:10vh 10vh;
+    }
         .hero-timeline-services-top {
         display: flex;
         flex-direction: column;

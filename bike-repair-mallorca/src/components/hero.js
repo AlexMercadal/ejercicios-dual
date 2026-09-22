@@ -22,18 +22,6 @@ class Hero extends HTMLElement {
         object-fit: cover;
     }
 
-    body {
-        margin: 0;
-    }
-
-    main {
-        display: flex;
-        flex-direction: column;
-        gap: 10vh;
-        padding-left: 5rem;
-        padding-right: 5rem;
-    }
-
     h1,
     h2,
     h3,

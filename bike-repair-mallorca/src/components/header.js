@@ -13,6 +13,7 @@ class Header extends HTMLElement {
     this.shadow.innerHTML =
     /*html*/`
     <style>
+
       header {
         background-color: hsla(0, 0%, 97%, 1.00);
         height: 15vh;
