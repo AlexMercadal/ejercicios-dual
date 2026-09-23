@@ -22,16 +22,7 @@ class Main extends HTMLElement {
     </style>
 
     <main>
-      <hero-component></hero-component>
-      <hero-bottom-component></hero-bottom-component>
-      <slider-brands-component></slider-brands-component>
-      <hero-services-component></hero-services-component>
-      <about-us-component></about-us-component>
-      <hero-timeline-component></hero-timeline-component>
-      <banner-component></banner-component>
-      <reviews-component></reviews-component>
-      <contact-component></contact-component>
-      <contact-map-component></contact-map-component>
+      <slot></slot>
     </main>
     `
 

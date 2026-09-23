@@ -6,10 +6,74 @@ class Sidebar extends HTMLElement {
     this.title = this.getAttribute('title')
     this.color = this.getAttribute('color')
     this.message = this.getAttribute('message')
+    this.data = []
   }
 
   connectedCallback() {
+    this.loadData()
     this.render()
+  }
+
+  loadData() {
+    this.data = [
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+      {
+        name: 'Lorem',
+        url: '#',
+      },
+
+    ]
   }
 
   render() {
@@ -76,28 +140,22 @@ class Sidebar extends HTMLElement {
             display: flex;
             flex-direction: column;
             width: 20%;
-            max-height: 100vh;
-            position: fixed;
             z-index: 1001;
             background-color: hsl(0, 0%, 6%);
-            overflow: scroll;
-            transition: all 1s ease;
-            left: 0;
+            height:100vh;
           }
 
           .aside-right {
-            cursor: pointer;
             left: 0;
             position: fixed;
             top: 0;
             transition: all 1s ease;
+            z-index:1001;
           }
 
           .aside-right.inactive {
             background-color: red;
           }
-
-
 
           .aside-left {
             width: 2%;
@@ -117,30 +175,30 @@ class Sidebar extends HTMLElement {
             left: -100%;
           }
 
-          .aside-right::-webkit-scrollbar-thumb,
-          .aside-left::-webkit-scrollbar-thumb {
+          .sidebar-active::-webkit-scrollbar-thumb,
+          .sidebar-active::-webkit-scrollbar-thumb {
             background-color: #181818;
           }
 
-          .aside-right::-webkit-scrollbar,
-          .aside-left::-webkit-scrollbar {
+          .sidebar-active::-webkit-scrollbar,
+          .sidebar-active::-webkit-scrollbar {
             width: 5px;
             height: 8px;
             background-color: white;
           }
 
-          .aside-right::-webkit-scrollbar:horizontal,
-          .aside-left::-webkit-scrollbar:horizontal {
+          .sidebar-active::-webkit-scrollbar:horizontal,
+          .sidebar-active::-webkit-scrollbar:horizontal {
             display: none;
           }
 
-          .aside-right::-webkit-scrollbar-thumb:active,
-          .aside-left::-webkit-scrollbar-thumb:active {
+          .sidebar-active::-webkit-scrollbar-thumb:active,
+          .sidebar-active::-webkit-scrollbar-thumb:active {
             background-color: #313131;
           }
 
-          .aside-right::-webkit-scrollbar-thumb:hover,
-          .aside-left::-webkit-scrollbar-thumb:hover {
+          .sidebar-active::-webkit-scrollbar-thumb:hover,
+          .sidebar-active::-webkit-scrollbar-thumb:hover {
             background-color: #313131;
           }
 
@@ -155,8 +213,8 @@ class Sidebar extends HTMLElement {
             gap: 2rem;
             padding-left: 1rem;
             padding-right: 1rem;
-
-
+            height:100vh;
+            overflow:scroll;
           }
 
           .sidebar-top {
@@ -344,11 +402,10 @@ class Sidebar extends HTMLElement {
             justify-content: flex-start;
             align-items: center;
             gap: 1rem;
-            position: sticky;
-            bottom: 0;
-            left: 0;
+            position: absolute;
             z-index: 1001;
             flex-shrink: 0;
+            bottom:0;
           }
 
           .sidebar-footer-user {
@@ -393,7 +450,7 @@ class Sidebar extends HTMLElement {
 
     </style>
 
-      <aside class="aside-right">
+  <aside class="aside-right">
     <div class="sidebar-active">
       <div class="sidebar-top">
         <div class="sidebar-top-title">
@@ -464,105 +521,7 @@ class Sidebar extends HTMLElement {
           <h3>Chats</h3>
         </div>
         <div class="sidebar-chat">
-          <ul>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod obcaecati perspiciatis
-              distinctio quo cupiditate maxime temporibus quaerat consectetur qui, in sequi eum,
-              laboriosam vero repudiandae ab corrupti, sed praesentium amet.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quisquam totam quia quis
-              doloribus perferendis explicabo quasi, enim ipsum voluptatum neque accusamus omnis provident
-              facere sit iusto voluptatem dolorum atque!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere maiores nobis velit
-              accusantium odit vel a deleniti libero sit aliquam, odio reprehenderit. Dolore doloribus
-              distinctio officia obcaecati praesentium nam nulla.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat sapiente ipsa facere sunt,
-              distinctio eveniet accusantium sed consequatur iure laudantium, possimus quis, unde culpa
-              corporis deserunt reiciendis. Minus, itaque reprehenderit?</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam voluptatibus praesentium
-              animi. Eius tempora, sint maxime, cum neque accusamus porro aperiam laborum, laudantium
-              reiciendis eum temporibus ipsum nemo perspiciatis corporis.</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est doloremque itaque veritatis
-              nam. Quas quia deserunt laborum officiis similique, iusto nisi deleniti est, tenetur
-              dignissimos voluptate, amet officia quod. Eos!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque aspernatur voluptas
-              aliquid deleniti amet rerum porro. Libero, rerum doloremque. Reiciendis voluptatum
-              mollitia voluptatem maxime velit quia totam. Reiciendis, rerum culpa.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure vel autem deleniti, totam
-              cum, minus libero, quidem in dolorem consequuntur eos perspiciatis accusamus mollitia
-              consequatur. Consequuntur, voluptate similique. Consequuntur!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem non consequatur, tempora
-              dolorum cumque, at accusantium natus doloremque blanditiis unde iusto voluptates, amet at
-              eaque? Dicta nisi officia in accusantium.</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aspernatur odit
-              repudiandae quod laborum tenetur, doloremque, natus impedit nemo totam voluptas esse! Optio
-              beatae labore ullam. Repudiandae itaque vel modi!</li>
-            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi dolor aperiam voluptate ea
-              quibusdam tenetur similique expedita, voluptatum voluptates doloremque maxime, officiis
-              consequuntur ullam velit rerum cumque explicabo dolorem? Quos?</li>
-            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae explicabo amet, vel
-              dolore blanditiis at, enim non, cumque impedit a iusto accusantium natus nostrum
-              voluptatem adipisci consequatur temporibus hic? Voluptatem!</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, rerum minima? Nam, hic
-              consequatur? Impedit molestias nisi explicabo, ullam, rerum facere a officiis eaque
-              tenetur, illo quod velit dolorum accusantium?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, rerum minima? Nam, hic
-              consequatur? Impedit molestias nisi explicabo, ullam, rerum facere a officiis eaque
-              tenetur, illo quod velit dolorum accusantium?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, rerum minima? Nam, hic
-              consequatur? Impedit molestias nisi explicabo, ullam, rerum facere a officiis eaque
-              tenetur, illo quod velit dolorum accusantium?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore, rerum minima? Nam, hic
-              consequatur? Impedit molestias nisi explicabo, ullam, rerum facere a officiis eaque
-              tenetur, illo quod velit dolorum accusantium?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam ullam voluptates dolorem
-              voluptatem odit eos porro amet minima adipisci error nostrum officiis, cum repudiandae
-              repellendus, blanditiis non vitae, facere quidem?</li>
-
-          </ul>
+        <ul></ul>
         </div>
       </div>
     </div>
@@ -603,6 +562,15 @@ class Sidebar extends HTMLElement {
     </div>
   </aside>
     `
+
+    const ul = this.shadow.querySelector('ul')
+
+    this.data.forEach(chat => {
+      const link = document.createElement('li')
+      link.ul = chat.url
+      link.textContent = chat.name
+      ul.appendChild(link)
+    })
 
     this.shadow.querySelector('.sidebar').addEventListener("click", () => {
       this.shadow.querySelector('.aside-right').classList.toggle('inactive');

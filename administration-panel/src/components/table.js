@@ -3,10 +3,23 @@ class Table extends HTMLElement {
   constructor() {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
+    this.data = []
   }
 
   connectedCallback() {
+    this.loadData()
     this.render()
+  }
+
+  loadData() {
+    this.data = [
+      {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        creationDate: '22-09-2026',
+        updatedDate: '22-09-2026',
+      }
+    ]
   }
 
   render() {
@@ -72,14 +85,13 @@ class Table extends HTMLElement {
       }
 
       .data ul li{
-        font-family:'Valley Sans', sans-serif;
+        font-family:'Arimo', sans-serif;
         list-style:none;
         font-size: 0.9rem;
       }
 
       .data ul li span{
-        font-family:'Arimo';
-        font-weight:400;
+        font-family:'Valley Sans';
       }
 
     </style>
@@ -102,16 +114,46 @@ class Table extends HTMLElement {
       </div>
       <div class="content">
         <div class="data">
-          <ul>
-            <li>Nombre: <span>Carlos</span></li>
-            <li>Email: <span>carlossedagambin@gmail.com</span></li>
-            <li>Fecha de <span>creación: 2026-09-22</span></li>
-            <li>Fecha de actualización: <span>2026-09-22</span></li>
-          </ul>
+          <ul></ul>
         </div>
       </div>
     </div>  
     `
+    const ul = this.shadow.querySelector('ul')
+
+    this.data.forEach(content => {
+      const name = document.createElement('li')
+      name.textContent = content.name
+      ul.appendChild(name)
+
+      if (name) {
+        name.textContent = 'Nombre: ' + content.name
+      }
+
+      const email = document.createElement('li')
+      email.textContent = content.email
+      ul.appendChild(email)
+
+      if (email) {
+        email.textContent = 'Email: ' + content.email
+      }
+
+      const creationDate = document.createElement('li')
+      creationDate.textContent = content.creationDate
+      ul.appendChild(creationDate)
+
+      if (creationDate) {
+        creationDate.textContent = 'Fecha de creación: ' + content.creationDate
+      }
+
+      const updatedDate = document.createElement('li')
+      updatedDate.textContent = content.updatedDate
+      ul.appendChild(updatedDate)
+
+      if (updatedDate) {
+        updatedDate.textContent = 'Fecha de actualización: ' + content.updatedDate
+      }
+    })
 
   }
 }
