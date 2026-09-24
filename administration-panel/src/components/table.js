@@ -90,9 +90,10 @@ class Table extends HTMLElement {
         font-size: 0.9rem;
       }
 
-      .data ul li span{
+      li span{
         font-family:'Valley Sans';
       }
+
 
     </style>
     <div class="table">
@@ -122,37 +123,47 @@ class Table extends HTMLElement {
     const ul = this.shadow.querySelector('ul')
 
     this.data.forEach(content => {
+
+
       const name = document.createElement('li')
-      name.textContent = content.name
+      const nombre = document.createElement('span')
+      nombre.textContent = 'Nombre: '
+
+      name.appendChild(nombre)
+      name.append(content.name)
       ul.appendChild(name)
 
-      if (name) {
-        name.textContent = 'Nombre: ' + content.name
-      }
-
       const email = document.createElement('li')
-      email.textContent = content.email
+      const emailLabel = document.createElement('span')
+      emailLabel.textContent = 'Email: ';
+
+      email.appendChild(emailLabel)
+      email.append(content.email)
       ul.appendChild(email)
 
-      if (email) {
-        email.textContent = 'Email: ' + content.email
-      }
 
       const creationDate = document.createElement('li')
-      creationDate.textContent = content.creationDate
+      const creationDateLabel = document.createElement('span')
+      creationDateLabel.textContent = "Fecha de creación: "
+
+      creationDate.appendChild(creationDateLabel)
+      creationDate.append(content.creationDate)
       ul.appendChild(creationDate)
 
-      if (creationDate) {
-        creationDate.textContent = 'Fecha de creación: ' + content.creationDate
-      }
 
       const updatedDate = document.createElement('li')
-      updatedDate.textContent = content.updatedDate
+      const updatedDateLabel = document.createElement('span')
+      updatedDateLabel.textContent = "Fecha de actualización: "
+
+      updatedDate.appendChild(updatedDateLabel)
+      updatedDate.append(content.updatedDate)
       ul.appendChild(updatedDate)
 
-      if (updatedDate) {
-        updatedDate.textContent = 'Fecha de actualización: ' + content.updatedDate
-      }
+
+
+
+      // updatedDate.textContent = 'Fecha de actualización: ' + content.updatedDate
+
     })
 
   }
