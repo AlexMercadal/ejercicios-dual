@@ -13,30 +13,23 @@ class Main extends HTMLElement {
     this.shadow.innerHTML =
     /*html*/`
     <style>
+
+      *{
+        box-sizing: border-box;
+      }
+
       main{
-        display:flex;
-        width:100%;
-        height:85vh;
-        background-color:#FBF4ED;
-        padding-top:2rem;
-      }
-
-      .main-left{
-        width:30%;
-      }
-
-      .main-right{
-        width:70%;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: 1fr 3fr;
+        width: 100%;
+        background-color: hsla(30, 64%, 96%, 1.00);
+        padding: 2rem;
       }
     </style>
 
     <main>
-    <div class="main-left">
-      <slot name="main-left"></slot>
-    </div>
-    <div class="main-right">
-      <slot name="main-right"></slot>
-    </div>
+      <slot></slot>
     </main>
     `
 

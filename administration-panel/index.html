@@ -17,13 +17,18 @@
 
 <body>
   <header-component>
-    <title-component slot="header-left" title="Panel de administración"></title-component>
-    <bar-icon-component slot="header-right"></bar-icon-component>
+    <title-component title="Panel de administración"></title-component>
+    <menu-component></menu-component>
   </header-component>
 
   <main-component>
-    <table-component slot="main-left"></table-component>
-    <form-component slot="main-right"></form-component>
+    <table-component labels='{
+      "name":"Nombre",
+      "email": "Email",
+      "createdAt": "Fecha de creación",
+      "updatedAt": "Fecha de actualización"
+    }'></table-component>
+    <form-component></form-component>
   </main-component>
 </body>
 

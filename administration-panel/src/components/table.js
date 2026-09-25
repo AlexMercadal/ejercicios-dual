@@ -4,6 +4,7 @@ class Table extends HTMLElement {
     super()
     this.shadow = this.attachShadow({ mode: 'open' })
     this.data = []
+    this.labels = JSON.parse(this.getAttribute('labels'))
   }
 
   connectedCallback() {
@@ -16,8 +17,59 @@ class Table extends HTMLElement {
       {
         name: 'Carlos',
         email: 'carlossedagambin@gmail.com',
-        creationDate: '22-09-2026',
-        updatedDate: '22-09-2026',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      },
+      {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
+      }, {
+        name: 'Carlos',
+        email: 'carlossedagambin@gmail.com',
+        createdAt: '22-09-2026',
+        updatedAt: '22-09-2026',
       }
     ]
   }
@@ -26,13 +78,12 @@ class Table extends HTMLElement {
     this.shadow.innerHTML =
     /*html*/`
     <style>
-    .table{
-      display:flex;
-      flex-direction:column;
-      padding:0 2rem;
-    }
+      .table{
+        display:flex;
+        flex-direction:column;
+      }
 
-    .toolbar{
+      .toolbar{
         display:flex;
         align-items:center;
         border-bottom:1px solid #AB2309;
@@ -72,13 +123,32 @@ class Table extends HTMLElement {
         cursor:pointer;
       }
 
-      .content{
-        margin-top:1rem;
-        border:1px solid #AB2309;
-        background-color:white;
+      .table-body{
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        min-height: 80vh;
+        max-height: 80vh;
+        overflow: auto;
+        padding: 0 1rem;
+      }
+
+      .table-body::-webkit-scrollbar{
+        width: 2px;
+      }
+
+      .table-body::-webkit-scrollbar-track{
+        background: transparent;
+      }
+
+      .table-body::-webkit-scrollbar-thumb{
+        background-color:#AB2309;
+        border-radius: 10px;
       }
 
       .data{
+        border: 1px solid #AB2309;
+        background-color:white;
         display:flex;
         flex-direction:column;
         gap:1rem;
@@ -92,6 +162,11 @@ class Table extends HTMLElement {
 
       li span{
         font-family:'Valley Sans';
+      }
+
+      li span::after{
+        content: ":";
+        margin-right: 0.2rem;
       }
 
 
@@ -113,56 +188,30 @@ class Table extends HTMLElement {
           </div>
         </div>
       </div>
-      <div class="content">
-        <div class="data">
-          <ul></ul>
-        </div>
-      </div>
+      <div class="table-body"></div>
     </div>  
     `
-    const ul = this.shadow.querySelector('ul')
+    const tableBody = this.shadow.querySelector('.table-body')
 
-    this.data.forEach(content => {
+    this.data.forEach(element => {
 
+      const data = document.createElement('div')
+      data.classList.add('data')
+      tableBody.appendChild(data)
 
-      const name = document.createElement('li')
-      const nombre = document.createElement('span')
-      nombre.textContent = 'Nombre: '
-
-      name.appendChild(nombre)
-      name.append(content.name)
-      ul.appendChild(name)
-
-      const email = document.createElement('li')
-      const emailLabel = document.createElement('span')
-      emailLabel.textContent = 'Email: ';
-
-      email.appendChild(emailLabel)
-      email.append(content.email)
-      ul.appendChild(email)
+      const ul = document.createElement('ul')
+      data.appendChild(ul)
 
 
-      const creationDate = document.createElement('li')
-      const creationDateLabel = document.createElement('span')
-      creationDateLabel.textContent = "Fecha de creación: "
+      Object.entries(element).forEach(([key, value]) => {
+        const li = document.createElement('li')
+        ul.appendChild(li)
+        li.textContent = value
 
-      creationDate.appendChild(creationDateLabel)
-      creationDate.append(content.creationDate)
-      ul.appendChild(creationDate)
-
-
-      const updatedDate = document.createElement('li')
-      const updatedDateLabel = document.createElement('span')
-      updatedDateLabel.textContent = "Fecha de actualización: "
-
-      updatedDate.appendChild(updatedDateLabel)
-      updatedDate.append(content.updatedDate)
-      ul.appendChild(updatedDate)
-
-
-
-
-      // updatedDate.textContent = 'Fecha de actualización: ' + content.updatedDate
+        const label = document.createElement('span')
+        label.textContent = this.labels[key]
+        li.prepend(label)
+      })
 
     })
 

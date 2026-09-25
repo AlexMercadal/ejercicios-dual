@@ -246,51 +246,6 @@ class Sidebar extends HTMLElement {
             width: 20%;
           }
 
-          .sidebar-main {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            left: 0;
-            z-index: 1002;
-            background-color: #181818;
-            margin-bottom: 5vh;
-          }
-
-          .sidebar-main-menu {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            padding: 0.5rem 0.5rem 0.5rem 0;
-            gap: 0.5rem;
-          }
-
-          .sidebar-main-menu:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-
-          .side-main-menu:active {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-
-
-          .sidebar-main-menu span {
-            width: 90%;
-            font-family: "Google Sans", sans-serif;
-            font-size: 1rem;
-          }
-
-          .sidebar-main-menu svg {
-            width: 8%;
-          }
-
-
-
           .sidebar-fixed {
             width: 100%;
             height: 20vh;
@@ -310,130 +265,6 @@ class Sidebar extends HTMLElement {
             font-size: 1.3rem;
             text-align: left;
           }
-
-          .sidebar-folders {
-            display: flex;
-            flex-direction: column;
-
-          }
-
-          .sidebar-folder {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            cursor: pointer;
-            padding: 0.5rem 0.5rem 0.5rem 0;
-            gap: 0.5rem;
-          }
-
-          .sidebar-folder:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-
-          .sidebar-folder:active {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-
-          .sidebar-folder svg {
-            width: 10%;
-          }
-
-          .sidebar-folder span {
-            width: 90%;
-            font-family: "Valley Sans", sans-serif;
-          }
-
-          .sidebar-bottom-title {
-            padding-bottom: 1rem;
-          }
-
-          .sidebar-bottom-title h3 {
-            font-family: "Google Sans", sans-serif;
-            font-size: 1.3rem;
-            text-align: left;
-          }
-
-          .sidebar-chat {
-            cursor: pointer;
-          }
-
-          .sidebar-chat::after {
-            content: "";
-            height: 100%;
-            width: 3vh;
-            background: linear-gradient(90deg, rgba(15, 15, 15, 0.51) 0%, rgba(15, 15, 15, 1) 100%);
-            position: absolute;
-            margin: 10rem 0 0 0;
-            right: 0;
-            top: 0%;
-            z-index: 1001;
-          }
-
-          .sidebar-chat li {
-            font-family: "Valley Sans", sans-serif;
-            font-size: 1rem;
-          }
-
-          .sidebar-chat ul {
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-
-          }
-
-          .sidebar-chat li {
-            padding: 0.5rem 0.5rem 0.5rem 0;
-          }
-
-          .sidebar-chat li:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-          }
-
-          .sidebar-chat li:active {
-            background-color: rgba(255, 255, 255, 0.2);
-          }
-
-          .sidebar-footer {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            gap: 1rem;
-            position: absolute;
-            z-index: 1001;
-            flex-shrink: 0;
-            bottom:0;
-          }
-
-          .sidebar-footer-user {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            background-color: hsl(138, 74%, 39%);
-            padding: 0.2rem;
-          }
-
-          .sidebar-user {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            padding-left: 1rem;
-          }
-
-          .sidebar-user svg {
-            width: 10%;
-          }
-
-          .sidebar-user span {
-            width: 90%;
-            font-family: "Google Sans", sans-serif;
-            font-size: 1rem;
-          }
-
 
           .sidebar-inactive {
             display: flex;
@@ -469,75 +300,9 @@ class Sidebar extends HTMLElement {
           </svg>
         </div>
       </div>
-
-      <div class="sidebar-main">
-        <div class="sidebar-main-menu">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>button-pointer</title>
-            <path
-              d="M20 20.5C20 21.3 19.3 22 18.5 22H13C12.6 22 12.3 21.9 12 21.6L8 17.4L8.7 16.6C8.9 16.4 9.2 16.3 9.5 16.3H9.7L12 18V9C12 8.4 12.4 8 13 8S14 8.4 14 9V13.5L15.2 13.6L19.1 15.8C19.6 16 20 16.6 20 17.1V20.5M20 2H4C2.9 2 2 2.9 2 4V12C2 13.1 2.9 14 4 14H8V12H4V4H20V12H18V14H20C21.1 14 22 13.1 22 12V4C22 2.9 21.1 2 20 2Z" />
-          </svg>
-          <span>Nuevo chat</span>
-        </div>
-      </div>
-
-      <div class="sidebar-fixed">
-        <div class="sidebar-fixed-title">
-          <h3>Proyectos</h3>
-        </div>
-
-        <div class="sidebar-folders">
-          <div class="sidebar-folder">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>folder-outline</title>
-              <path
-                d="M20,18H4V8H20M20,6H12L10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6Z" />
-            </svg>
-            <span>Carpeta</span>
-          </div>
-
-          <div class="sidebar-folder">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>folder-outline</title>
-              <path
-                d="M20,18H4V8H20M20,6H12L10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6Z" />
-            </svg>
-            <span>Carpeta</span>
-          </div>
-
-          <div class="sidebar-folder">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <title>folder-outline</title>
-              <path
-                d="M20,18H4V8H20M20,6H12L10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6Z" />
-            </svg>
-            <span>Carpeta</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="sidebar-bottom">
-        <div class="sidebar-bottom-title">
-          <h3>Chats</h3>
-        </div>
-        <div class="sidebar-chat">
-        <ul></ul>
-        </div>
-      </div>
     </div>
-    <div class="sidebar-footer">
-      <div class="sidebar-footer-user">
-        <div class="sidebar-user">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <title>account-outline</title>
-            <path
-              d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,6A2,2 0 0,0 10,8A2,2 0 0,0 12,10A2,2 0 0,0 14,8A2,2 0 0,0 12,6M12,13C14.67,13 20,14.33 20,17V20H4V17C4,14.33 9.33,13 12,13M12,14.9C9.03,14.9 5.9,16.36 5.9,17V18.1H18.1V17C18.1,16.36 14.97,14.9 12,14.9Z" />
-          </svg>
-          <span>Usuario</span>
-        </div>
-
-      </div>
-    </div>
+    <chatarea-component></chatarea-component>
+    <userarea-component title="Usuario"></userarea-component>
   </aside>
 
 
@@ -558,19 +323,9 @@ class Sidebar extends HTMLElement {
         <path
           d="M20,18H4V8H20M20,6H12L10,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V8C22,6.89 21.1,6 20,6Z" />
       </svg>
-
     </div>
   </aside>
     `
-
-    const ul = this.shadow.querySelector('ul')
-
-    this.data.forEach(chat => {
-      const link = document.createElement('li')
-      link.ul = chat.url
-      link.textContent = chat.name
-      ul.appendChild(link)
-    })
 
     this.shadow.querySelector('.sidebar').addEventListener("click", () => {
       this.shadow.querySelector('.aside-right').classList.toggle('inactive');

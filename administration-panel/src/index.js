@@ -1,4 +1,4 @@
-import './components/bar-icon.js'
+import './components/menu.js'
 import './components/header.js'
 import './components/title.js'
 import './components/main.js'

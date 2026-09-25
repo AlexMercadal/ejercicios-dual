@@ -27,20 +27,9 @@ class Header extends HTMLElement {
     </style>
 
     <header>
-      <div class="title">
-        <slot name="header-left">
-        </slot>
-      </div>
-      <div class="bar-icon">
-        <slot name="header-right">
-        </slot>
-      </div>
+      <slot></slot>
     </header>
     `
-
-    this.shadow.querySelector('.bar-icon').addEventListener('click', () => {
-    })
-
   }
 }
 
